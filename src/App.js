@@ -122,4 +122,28 @@ function Topic9() {
   );
 }
 
-export default Topic9;
+// props:
+
+const Props1 = (props) => {
+  return (
+    <section>
+      <img src={props.img} alt={props.name} />
+      <h1>Name: {props.name}</h1>
+      <h3>Hobies: {props.hobbies}</h3>
+    </section>
+  );
+};
+
+function Props2_Parent() {
+  return (
+    <>
+      <Props1
+        img="https://source.unsplash.com/random/400x400"
+        name="Omkar"
+        hobbies={["Coding ", "Editing"]}
+      />
+    </>
+  );
+}
+
+export default Props2_Parent;
