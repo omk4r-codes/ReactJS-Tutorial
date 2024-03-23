@@ -73,4 +73,53 @@ function Topic7() {
     </>
   );
 }
-export default Topic7;
+
+// lists:
+// ex: 1
+function Topic8() {
+  const numbers = [1, 2, 3, 4, 5];
+  return (
+    <>
+      {numbers.map((number) => (
+        <ul key={Math.random() * 10}>
+          <li>{number}</li>
+        </ul>
+      ))}
+    </>
+  );
+}
+
+// ex: 2
+function Topic9() {
+  const user = [
+    {
+      username: "alex",
+      email: "alex@gmail.com",
+      location: "India",
+    },
+    {
+      username: "johnny",
+      email: "sins@gmail.com",
+      location: "UK",
+    },
+    {
+      username: "Bob",
+      email: "bob@gmail.com",
+      location: "Pakistan",
+    },
+  ];
+
+  return (
+    <>
+      {user.map((usr) => (
+        <ul key={Math.random() * 10}>
+          <li>{usr.username}</li>
+          <li>{usr.email}</li>
+          <li>{usr.location === "Pakistan" ? "Aata?" : usr.location}</li>
+        </ul>
+      ))}
+    </>
+  );
+}
+
+export default Topic9;
